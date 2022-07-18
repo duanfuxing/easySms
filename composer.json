@@ -1,5 +1,5 @@
 {
-    "name": "overtrue/easy-sms",
+    "name": "duan617/easy-sms",
     "description": "The easiest way to send short message.",
     "type": "library",
     "require": {
@@ -23,7 +23,7 @@
     },
     "license": "MIT",
     "authors": [{
-        "name": "overtrue",
-        "email": "i@overtrue.me"
+        "name": "duan617",
+        "email": "13249392000@163.com"
     }]
 }
