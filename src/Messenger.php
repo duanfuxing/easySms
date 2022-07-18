@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms;
+namespace duan617\EasySms;
 
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Exceptions\NoGatewayAvailableException;
+use duan617\EasySms\Contracts\MessageInterface;
+use duan617\EasySms\Contracts\PhoneNumberInterface;
+use duan617\EasySms\Exceptions\NoGatewayAvailableException;
 
 /**
  * Class Messenger.
@@ -25,14 +25,14 @@ class Messenger
     const STATUS_FAILURE = 'failure';
 
     /**
-     * @var \Overtrue\EasySms\EasySms
+     * @var \duan617\EasySms\EasySms
      */
     protected $easySms;
 
     /**
      * Messenger constructor.
      *
-     * @param \Overtrue\EasySms\EasySms $easySms
+     * @param \duan617\EasySms\EasySms $easySms
      */
     public function __construct(EasySms $easySms)
     {
@@ -42,13 +42,13 @@ class Messenger
     /**
      * Send a message.
      *
-     * @param \Overtrue\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Overtrue\EasySms\Contracts\MessageInterface     $message
+     * @param \duan617\EasySms\Contracts\PhoneNumberInterface $to
+     * @param \duan617\EasySms\Contracts\MessageInterface     $message
      * @param array                                            $gateways
      *
      * @return array
      *
-     * @throws \Overtrue\EasySms\Exceptions\NoGatewayAvailableException
+     * @throws \duan617\EasySms\Exceptions\NoGatewayAvailableException
      */
     public function send(PhoneNumberInterface $to, MessageInterface $message, array $gateways = [])
     {

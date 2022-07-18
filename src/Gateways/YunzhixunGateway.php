@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Gateways;
+namespace duan617\EasySms\Gateways;
 
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Exceptions\GatewayErrorException;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Traits\HasHttpRequest;
+use duan617\EasySms\Contracts\MessageInterface;
+use duan617\EasySms\Contracts\PhoneNumberInterface;
+use duan617\EasySms\Exceptions\GatewayErrorException;
+use duan617\EasySms\Support\Config;
+use duan617\EasySms\Traits\HasHttpRequest;
 
 /**
  * Class YunzhixunGateway.
@@ -39,9 +39,9 @@ class YunzhixunGateway extends Gateway
     /**
      * Send a short message.
      *
-     * @param \Overtrue\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Overtrue\EasySms\Contracts\MessageInterface     $message
-     * @param \Overtrue\EasySms\Support\Config                 $config
+     * @param \duan617\EasySms\Contracts\PhoneNumberInterface $to
+     * @param \duan617\EasySms\Contracts\MessageInterface     $message
+     * @param \duan617\EasySms\Support\Config                 $config
      *
      * @return array
      *

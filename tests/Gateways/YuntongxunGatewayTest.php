@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests\Gateways;
+namespace duan617\EasySms\Tests\Gateways;
 
-use Overtrue\EasySms\Exceptions\GatewayErrorException;
-use Overtrue\EasySms\Gateways\YuntongxunGateway;
-use Overtrue\EasySms\Message;
-use Overtrue\EasySms\PhoneNumber;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Tests\TestCase;
+use duan617\EasySms\Exceptions\GatewayErrorException;
+use duan617\EasySms\Gateways\YuntongxunGateway;
+use duan617\EasySms\Message;
+use duan617\EasySms\PhoneNumber;
+use duan617\EasySms\Support\Config;
+use duan617\EasySms\Tests\TestCase;
 
 class YuntongxunGatewayTest extends TestCase
 {

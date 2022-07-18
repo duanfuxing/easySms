@@ -9,18 +9,18 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests;
+namespace duan617\EasySms\Tests;
 
-use Overtrue\EasySms\Contracts\GatewayInterface;
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\EasySms;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Gateways\AliyunGateway;
-use Overtrue\EasySms\Message;
-use Overtrue\EasySms\Messenger;
-use Overtrue\EasySms\PhoneNumber;
-use Overtrue\EasySms\Support\Config;
+use duan617\EasySms\Contracts\GatewayInterface;
+use duan617\EasySms\Contracts\MessageInterface;
+use duan617\EasySms\Contracts\PhoneNumberInterface;
+use duan617\EasySms\EasySms;
+use duan617\EasySms\Exceptions\InvalidArgumentException;
+use duan617\EasySms\Gateways\AliyunGateway;
+use duan617\EasySms\Message;
+use duan617\EasySms\Messenger;
+use duan617\EasySms\PhoneNumber;
+use duan617\EasySms\Support\Config;
 use RuntimeException;
 
 class EasySmsTest extends TestCase
@@ -33,7 +33,7 @@ class EasySmsTest extends TestCase
 
         // invalid gateway
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Class "Overtrue\EasySms\Gateways\NotExistsGatewayNameGateway" is a invalid easy-sms gateway.');
+        $this->expectExceptionMessage('Class "duan617\EasySms\Gateways\NotExistsGatewayNameGateway" is a invalid easy-sms gateway.');
 
         $easySms->gateway('NotExistsGatewayName');
     }
@@ -42,7 +42,7 @@ class EasySmsTest extends TestCase
     {
         $easySms = \Mockery::mock(EasySms::class.'[makeGateway]', [['default' => DummyGatewayForTest::class]]);
 
-        $this->expectExceptionMessage('Class "Overtrue\EasySms\Tests\DummyGatewayNotImplementsGatewayInterface" is a invalid easy-sms gateway.');
+        $this->expectExceptionMessage('Class "duan617\EasySms\Tests\DummyGatewayNotImplementsGatewayInterface" is a invalid easy-sms gateway.');
         $easySms->makeGateway(DummyGatewayNotImplementsGatewayInterface::class, []);
     }
 

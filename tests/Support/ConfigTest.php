@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests\Support;
+namespace duan617\EasySms\Tests\Support;
 
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Tests\TestCase;
+use duan617\EasySms\Support\Config;
+use duan617\EasySms\Tests\TestCase;
 
 class ConfigTest extends TestCase
 {

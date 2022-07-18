@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms;
+namespace duan617\EasySms;
 
 /**
  * Class PhoneNumberInterface.
  *
  * @author overtrue <i@overtrue.me>
  */
-class PhoneNumber implements \Overtrue\EasySms\Contracts\PhoneNumberInterface
+class PhoneNumber implements \duan617\EasySms\Contracts\PhoneNumberInterface
 {
     /**
      * @var int

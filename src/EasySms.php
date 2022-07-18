@@ -9,17 +9,17 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms;
+namespace duan617\EasySms;
 
 use Closure;
-use Overtrue\EasySms\Contracts\GatewayInterface;
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Contracts\StrategyInterface;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Gateways\Gateway;
-use Overtrue\EasySms\Strategies\OrderStrategy;
-use Overtrue\EasySms\Support\Config;
+use duan617\EasySms\Contracts\GatewayInterface;
+use duan617\EasySms\Contracts\MessageInterface;
+use duan617\EasySms\Contracts\PhoneNumberInterface;
+use duan617\EasySms\Contracts\StrategyInterface;
+use duan617\EasySms\Exceptions\InvalidArgumentException;
+use duan617\EasySms\Gateways\Gateway;
+use duan617\EasySms\Strategies\OrderStrategy;
+use duan617\EasySms\Support\Config;
 use RuntimeException;
 
 /**
@@ -28,7 +28,7 @@ use RuntimeException;
 class EasySms
 {
     /**
-     * @var \Overtrue\EasySms\Support\Config
+     * @var \duan617\EasySms\Support\Config
      */
     protected $config;
 
@@ -48,7 +48,7 @@ class EasySms
     protected $gateways = [];
 
     /**
-     * @var \Overtrue\EasySms\Messenger
+     * @var \duan617\EasySms\Messenger
      */
     protected $messenger;
 
@@ -71,13 +71,13 @@ class EasySms
      * Send a message.
      *
      * @param string|array                                       $to
-     * @param \Overtrue\EasySms\Contracts\MessageInterface|array $message
+     * @param \duan617\EasySms\Contracts\MessageInterface|array $message
      * @param array                                              $gateways
      *
      * @return array
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
-     * @throws \Overtrue\EasySms\Exceptions\NoGatewayAvailableException
+     * @throws \duan617\EasySms\Exceptions\InvalidArgumentException
+     * @throws \duan617\EasySms\Exceptions\NoGatewayAvailableException
      */
     public function send($to, $message, array $gateways = [])
     {
@@ -97,9 +97,9 @@ class EasySms
      *
      * @param string|null $name
      *
-     * @return \Overtrue\EasySms\Contracts\GatewayInterface
+     * @return \duan617\EasySms\Contracts\GatewayInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \duan617\EasySms\Exceptions\InvalidArgumentException
      */
     public function gateway($name)
     {
@@ -115,9 +115,9 @@ class EasySms
      *
      * @param string|null $strategy
      *
-     * @return \Overtrue\EasySms\Contracts\StrategyInterface
+     * @return \duan617\EasySms\Contracts\StrategyInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \duan617\EasySms\Exceptions\InvalidArgumentException
      */
     public function strategy($strategy = null)
     {
@@ -156,7 +156,7 @@ class EasySms
     }
 
     /**
-     * @return \Overtrue\EasySms\Support\Config
+     * @return \duan617\EasySms\Support\Config
      */
     public function getConfig()
     {
@@ -164,7 +164,7 @@ class EasySms
     }
 
     /**
-     * @return \Overtrue\EasySms\Messenger
+     * @return \duan617\EasySms\Messenger
      */
     public function getMessenger()
     {
@@ -180,7 +180,7 @@ class EasySms
      *
      * @return GatewayInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \duan617\EasySms\Exceptions\InvalidArgumentException
      */
     protected function createGateway($name)
     {
@@ -212,9 +212,9 @@ class EasySms
      * @param string $gateway
      * @param array  $config
      *
-     * @return \Overtrue\EasySms\Contracts\GatewayInterface
+     * @return \duan617\EasySms\Contracts\GatewayInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \duan617\EasySms\Exceptions\InvalidArgumentException
      */
     protected function makeGateway($gateway, $config)
     {
@@ -257,9 +257,9 @@ class EasySms
     }
 
     /**
-     * @param string|\Overtrue\EasySms\Contracts\PhoneNumberInterface $number
+     * @param string|\duan617\EasySms\Contracts\PhoneNumberInterface $number
      *
-     * @return \Overtrue\EasySms\Contracts\PhoneNumberInterface|string
+     * @return \duan617\EasySms\Contracts\PhoneNumberInterface|string
      */
     protected function formatPhoneNumber($number)
     {
@@ -271,9 +271,9 @@ class EasySms
     }
 
     /**
-     * @param array|string|\Overtrue\EasySms\Contracts\MessageInterface $message
+     * @param array|string|\duan617\EasySms\Contracts\MessageInterface $message
      *
-     * @return \Overtrue\EasySms\Contracts\MessageInterface
+     * @return \duan617\EasySms\Contracts\MessageInterface
      */
     protected function formatMessage($message)
     {
@@ -296,7 +296,7 @@ class EasySms
      *
      * @return array
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \duan617\EasySms\Exceptions\InvalidArgumentException
      */
     protected function formatGateways(array $gateways)
     {

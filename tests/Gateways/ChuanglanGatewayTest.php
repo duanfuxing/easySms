@@ -9,15 +9,15 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests\Gateways;
+namespace duan617\EasySms\Tests\Gateways;
 
-use Overtrue\EasySms\Exceptions\GatewayErrorException;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Gateways\ChuanglanGateway;
-use Overtrue\EasySms\Message;
-use Overtrue\EasySms\PhoneNumber;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Tests\TestCase;
+use duan617\EasySms\Exceptions\GatewayErrorException;
+use duan617\EasySms\Exceptions\InvalidArgumentException;
+use duan617\EasySms\Gateways\ChuanglanGateway;
+use duan617\EasySms\Message;
+use duan617\EasySms\PhoneNumber;
+use duan617\EasySms\Support\Config;
+use duan617\EasySms\Tests\TestCase;
 
 /**
  * Class ChuanglanGatewayTest.

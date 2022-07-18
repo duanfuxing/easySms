@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Contracts;
+namespace duan617\EasySms\Contracts;
 
-use Overtrue\EasySms\Support\Config;
+use duan617\EasySms\Support\Config;
 
 /**
  * Class GatewayInterface.
@@ -28,9 +28,9 @@ interface GatewayInterface
     /**
      * Send a short message.
      *
-     * @param \Overtrue\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Overtrue\EasySms\Contracts\MessageInterface     $message
-     * @param \Overtrue\EasySms\Support\Config                 $config
+     * @param \duan617\EasySms\Contracts\PhoneNumberInterface $to
+     * @param \duan617\EasySms\Contracts\MessageInterface     $message
+     * @param \duan617\EasySms\Support\Config                 $config
      *
      * @return array
      */

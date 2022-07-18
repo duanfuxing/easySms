@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests\Traits;
+namespace duan617\EasySms\Tests\Traits;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
-use Overtrue\EasySms\Tests\TestCase;
-use Overtrue\EasySms\Traits\HasHttpRequest;
+use duan617\EasySms\Tests\TestCase;
+use duan617\EasySms\Traits\HasHttpRequest;
 use Psr\Http\Message\ResponseInterface;
 
 class HasHttpRequestTest extends TestCase

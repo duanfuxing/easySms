@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Contracts;
+namespace duan617\EasySms\Contracts;
 
 /**
  * Interface MessageInterface.
@@ -30,7 +30,7 @@ interface MessageInterface
     /**
      * Return message content.
      *
-     * @param \Overtrue\EasySms\Contracts\GatewayInterface|null $gateway
+     * @param \duan617\EasySms\Contracts\GatewayInterface|null $gateway
      *
      * @return string
      */
@@ -39,7 +39,7 @@ interface MessageInterface
     /**
      * Return the template id of message.
      *
-     * @param \Overtrue\EasySms\Contracts\GatewayInterface|null $gateway
+     * @param \duan617\EasySms\Contracts\GatewayInterface|null $gateway
      *
      * @return string
      */
@@ -48,7 +48,7 @@ interface MessageInterface
     /**
      * Return the template data of message.
      *
-     * @param \Overtrue\EasySms\Contracts\GatewayInterface|null $gateway
+     * @param \duan617\EasySms\Contracts\GatewayInterface|null $gateway
      *
      * @return array
      */

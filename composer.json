@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Overtrue\\EasySms\\": "src"
+            "duan617\\EasySms\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Overtrue\\EasySms\\Tests\\": "tests"
+            "duan617\\EasySms\\Tests\\": "tests"
         }
     },
     "license": "MIT",

@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Strategies;
+namespace duan617\EasySms\Strategies;
 
-use Overtrue\EasySms\Contracts\StrategyInterface;
+use duan617\EasySms\Contracts\StrategyInterface;
 
 /**
  * Class OrderStrategy.

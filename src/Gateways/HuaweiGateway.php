@@ -9,15 +9,15 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Gateways;
+namespace duan617\EasySms\Gateways;
 
 use GuzzleHttp\Exception\RequestException;
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Exceptions\GatewayErrorException;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Traits\HasHttpRequest;
+use duan617\EasySms\Contracts\MessageInterface;
+use duan617\EasySms\Contracts\PhoneNumberInterface;
+use duan617\EasySms\Exceptions\GatewayErrorException;
+use duan617\EasySms\Exceptions\InvalidArgumentException;
+use duan617\EasySms\Support\Config;
+use duan617\EasySms\Traits\HasHttpRequest;
 
 class HuaweiGateway extends Gateway
 {

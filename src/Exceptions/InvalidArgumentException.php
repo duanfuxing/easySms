@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Exceptions;
+namespace duan617\EasySms\Exceptions;
 
 /**
  * Class InvalidArgumentException.
