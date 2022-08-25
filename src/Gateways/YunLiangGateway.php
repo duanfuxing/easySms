@@ -47,6 +47,10 @@ class YunLiangGateway extends Gateway
                 $params = $this->buildVerifyCodeParams($to, $message, $config);
 
                 break;
+            case 'sendMarketContent':
+                $params = $this->buildMarketContentParams($to, $message, $config);
+
+                break;
             default:
                 throw new GatewayErrorException(sprintf('action: %s not supported', $action), 0);
         }
@@ -57,7 +61,7 @@ class YunLiangGateway extends Gateway
 
         $result = $this->postJson(self::ENDPOINT_TEMPLATE, $params, $headers);
 
-        $result = json_decode(trim($result,'"'));
+        $result = json_decode(trim($result, '"'));
 
         if (!isset($result->result) || $result->result != self::SUCCESS_CODE) {
             throw new GatewayErrorException($result->msg, $result['error'], $result);
@@ -66,13 +70,20 @@ class YunLiangGateway extends Gateway
         return $result;
     }
 
+    protected function _checkParams(Config $config)
+    {
+        if (empty($config->get('app_id')) || empty($config->get('app_secret'))) {
+            throw new InvalidCallbackException('app_id or app_secret not empty');
+        }
+    }
+
     /**
-     * @todo 未实现
      * @param PhoneNumberInterface $to
      * @param MessageInterface $message
      * @param Config $config
      * @return array|void
      * @throws GatewayErrorException
+     * @todo 未实现
      */
     public function buildSendContentParams(PhoneNumberInterface $to, MessageInterface $message, Config $config)
     {
@@ -111,6 +122,17 @@ class YunLiangGateway extends Gateway
             'timestamp' => $timestamp,
             'url'       => ''
         ];
+    }
+
+    /**
+     * @param $resource
+     * @param $function
+     *
+     * @return string
+     */
+    protected function buildEndpoint($content, $code, $time)
+    {
+        return sprintf($content, $code, $time);
     }
 
     /**
@@ -159,21 +181,32 @@ class YunLiangGateway extends Gateway
     }
 
     /**
-     * @param $resource
-     * @param $function
-     *
-     * @return string
+     * @param PhoneNumberInterface $to
+     * @param MessageInterface $message
+     * @param Config $config
+     * @return array
      */
-    protected function buildEndpoint($content, $code, $time)
+    public function buildMarketContentParams(PhoneNumberInterface $to, MessageInterface $message, Config $config)
     {
-        return sprintf($content, $code, $time);
-    }
-
-    protected function _checkParams(Config $config)
-    {
-        if (empty($config->get('app_id')) || empty($config->get('app_secret'))) {
-            throw new InvalidCallbackException('app_id or app_secret not empty');
+        if (empty($message->getContent($this))) {
+            throw new InvalidCallbackException('content not empty');
         }
+
+        $timestamp = date('YmdHis');
+
+        return [
+            'tempid'    => 'NO',
+            'to'        => $to->getNumber(),
+            'sign'      => md5($config->get('app_id') . $timestamp . $config->get('app_secret')),
+            'appid'     => $config->get('app_id'),
+            'sid'       => time(),
+            'type'      => 0,
+            'data'      => [
+                $config->get('verifyCode_template') . $message->getContent($this)
+            ],
+            'timestamp' => $timestamp,
+            'url'       => ''
+        ];
     }
 
 }
